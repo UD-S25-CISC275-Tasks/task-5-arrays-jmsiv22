@@ -103,7 +103,7 @@ export function injectPositive(values: number[]): number[] {
     let isNeg:boolean = values.some((num:number):boolean => num <0);
     //console.log(isNeg);
     let arr= [...values];
-    if(isNeg===false){
+    if(!isNeg){
         let sum:number = arr.reduce((num:number, currentTotal:number):number => num+currentTotal,0)
         arr.push(sum);
         return arr;
